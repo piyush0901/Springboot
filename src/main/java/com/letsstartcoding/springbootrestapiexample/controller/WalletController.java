@@ -29,7 +29,7 @@ public class WalletController implements ErrorController {
     @PostMapping("/wallet/{usr_id}")
     public String createWallet(@PathVariable(value="usr_id") Long userid, @Valid @RequestBody Wallet walDetails) {
 
-        Wallet wal=walletDAO.findOne(userid);
+        Wallet wal=walletDAO.findByUserid(userid);
 
         Employee emp=employeeDAO.findOne(userid);
 

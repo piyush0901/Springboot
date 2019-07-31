@@ -5,7 +5,7 @@ import com.letsstartcoding.springbootrestapiexample.repository.TransactionReposi
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.lang.annotation.Target;
+import java.util.List;
 
 @Service
 public class TransactionDAO {
@@ -35,4 +35,13 @@ public class TransactionDAO {
         return transactionRepository.findByMobile(mobile);
     }
 
+    public List<Transactions> findAllByUserid1(Long userid1){
+
+        return transactionRepository.findAllByUserid1(userid1);
+    }
+
+    public List<Transactions> findAllByMobile(String mobile) {
+
+        return transactionRepository.findAllByMobile(mobile);
+    }
 }
