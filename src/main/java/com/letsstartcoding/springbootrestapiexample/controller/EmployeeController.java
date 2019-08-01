@@ -6,6 +6,7 @@ import com.letsstartcoding.springbootrestapiexample.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.http.ResponseEntity;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -20,7 +21,7 @@ public class EmployeeController implements ErrorController {
     @Autowired
     EmployeeDAO employeeDAO;
 
-    /* to save an employee*/
+        /* to save an employee*/
     @PostMapping("/user")
     public Employee createEmployee(@Valid @RequestBody Employee emp) {
 
