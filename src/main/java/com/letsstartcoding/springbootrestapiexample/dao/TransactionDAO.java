@@ -44,4 +44,8 @@ public class TransactionDAO {
 
         return transactionRepository.findAllByMobile(mobile);
     }
+
+    public List<Transactions> findAll() {
+        return transactionRepository.findAll();
+    }
 }
