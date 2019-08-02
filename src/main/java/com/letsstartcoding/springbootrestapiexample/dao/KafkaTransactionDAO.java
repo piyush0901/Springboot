@@ -12,9 +12,8 @@ public class KafkaTransactionDAO {
     @Autowired
     KafkaTransactionRepository kafkaTransactionRepository;
 
-    /*to save an wallet*/
-    public KafkaTransactions save(KafkaTransactions val) {
-        //System.out.println("beat me");
-        return kafkaTransactionRepository.save(val);
+    /*to save an T1*/
+    public KafkaTransactions save(KafkaTransactions trans) {
+        return kafkaTransactionRepository.save(trans);
     }
 }

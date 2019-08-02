@@ -7,21 +7,20 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
-@Table(name="KafkaTransactions")
+@Table(name="Kafkatransactions")
 @EntityListeners(AuditingEntityListener.class)
 public class KafkaTransactions {
 
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long transid;
+    private String createdAt;
 
     private Long userid1;
     private String mobile;
     private Integer amount;
     private String status;
 
-    private String createdAt;
 
     public Long getTransid() {
         return transid;

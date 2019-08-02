@@ -14,22 +14,18 @@ import java.util.List;
 @Service
 public class Consumer {
 
-    //private final Logger logger = LoggerFactory.getLogger(Consumer.class);
 
-    @KafkaListener(topics = "users", id = "test-consumer-group")
+    @Autowired
+    KafkaTransactionDAO kafkaTransactionDAO;
+
+    @KafkaListener(id = "test-consumer-group" , topics = "users")
+
 
     public void consume(String trans2) throws IOException {
-        //@Autowired
-        KafkaTransactionDAO kafkaTransactionDAO = new KafkaTransactionDAO();
-        //logger.info(String.format("$$ -> Consumed Message -> %s",message));
-        System.out.println(trans2);
+
         ObjectMapper objectMapper = new ObjectMapper();
         KafkaTransactions trans1 = objectMapper.readValue(trans2,KafkaTransactions.class);
-        /*trans1.setUserid1(trans2.userid1());
-        trans1.setAmount(trans2.getAmount());
-        trans1.setCreatedAt(trans2.getCreatedAt());
-        trans1.setMobile(trans2.getMobile());
-        trans1.setStatus(trans2.getStatus());*/
+
         kafkaTransactionDAO.save(trans1);
     }
 

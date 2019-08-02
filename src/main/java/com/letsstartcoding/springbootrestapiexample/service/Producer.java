@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.letsstartcoding.springbootrestapiexample.model.Transactions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,14 +16,13 @@ public class Producer {
     String TOPIC = "users";
 
     @Autowired
-    KafkaTemplate<String, String> kafkaTemplate;// new KafkaTemplate<String, String>(props);
+    KafkaTemplate<String, String> kafkaTemplate;
 
     public void sendMessage(List<Transactions> trans) throws JsonProcessingException {
 
-        //KafkaTemplate<String,String> kafkaTemplate = null;
         ObjectMapper mapper = new ObjectMapper();
         for(int i=0;i<trans.size();i++){
-        kafkaTemplate.send(TOPIC,mapper.writeValueAsString(trans.get(i)));
+            kafkaTemplate.send(TOPIC,mapper.writeValueAsString(trans.get(i)));
         }
         System.out.println("Hi");
     }
