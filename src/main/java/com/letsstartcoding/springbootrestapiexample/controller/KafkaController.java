@@ -1,7 +1,9 @@
 package com.letsstartcoding.springbootrestapiexample.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.letsstartcoding.springbootrestapiexample.dao.OffsetDAO;
 import com.letsstartcoding.springbootrestapiexample.dao.TransactionDAO;
+import com.letsstartcoding.springbootrestapiexample.model.Offset;
 import com.letsstartcoding.springbootrestapiexample.model.Transactions;
 import com.letsstartcoding.springbootrestapiexample.service.Producer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,12 +29,19 @@ public class KafkaController {
     @Autowired
     TransactionDAO transactionDAO;
 
+    @Autowired
+    OffsetDAO offsetDAO;
+
+
     @Scheduled(fixedRate = 300000)
     @PostMapping(value = "/publish")
     public String sendMessageToKafkaTopic() throws JsonProcessingException {
 
+        Offset off = offsetDAO.findOne(1);
         List<Transactions> trans =  transactionDAO.findAll();
-        producer.sendMessage(trans);
+        producer.sendMessage(trans,off);
+        off.setValue(trans.size());
+        offsetDAO.save(off);
         return "Done";
     }
 

@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="511bb14a-4456-4658-b573-6b8ff9bf81a9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/dao/OffsetDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/model/Offset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/repository/OffsetRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/controller/KafkaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/controller/KafkaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/dao/KafkaTransactionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/dao/KafkaTransactionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/model/KafkaTransactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/model/KafkaTransactions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/repository/KafkaTransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/repository/KafkaTransactionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/service/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/service/Consumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/service/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/service/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/letsstartcoding/springbootrestapiexample/controller/KafkaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letsstartcoding/springbootrestapiexample/controller/KafkaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/letsstartcoding/springbootrestapiexample/dao/KafkaTransactionDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letsstartcoding/springbootrestapiexample/dao/KafkaTransactionDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/letsstartcoding/springbootrestapiexample/model/KafkaTransactions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letsstartcoding/springbootrestapiexample/model/KafkaTransactions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/letsstartcoding/springbootrestapiexample/repository/KafkaTransactionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letsstartcoding/springbootrestapiexample/repository/KafkaTransactionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/letsstartcoding/springbootrestapiexample/service/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letsstartcoding/springbootrestapiexample/service/Consumer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/letsstartcoding/springbootrestapiexample/service/Producer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letsstartcoding/springbootrestapiexample/service/Producer.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -198,7 +190,7 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@69ae8a52" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@350109bc" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -232,7 +224,8 @@
       <workItem from="1564633600288" duration="1039000" />
       <workItem from="1564636501951" duration="25290000" />
       <workItem from="1564719802555" duration="23992000" />
-      <workItem from="1564764949250" duration="1058000" />
+      <workItem from="1564764949250" duration="1682000" />
+      <workItem from="1564852271418" duration="5978000" />
     </task>
     <servers />
   </component>
@@ -311,17 +304,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/controller/KafkaController.java</url>
-          <line>34</line>
+          <line>41</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/service/Producer.java</url>
-          <line>24</line>
+          <line>29</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/service/Producer.java</url>
-          <line>26</line>
+          <line>31</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -346,28 +339,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/controller/KafkaController.java</url>
-          <line>35</line>
+          <line>44</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/controller/KafkaController.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/controller/KafkaController.java</url>
-          <line>33</line>
+          <line>40</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/service/Producer.java</url>
-          <line>18</line>
+          <line>20</line>
           <properties field="kafkaTemplate" class="com.letsstartcoding.springbootrestapiexample.service.Producer" />
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/letsstartcoding/springbootrestapiexample/controller/KafkaController.java</url>
-          <line>31</line>
+          <line>37</line>
           <properties class="com.letsstartcoding.springbootrestapiexample.controller.KafkaController" method="sendMessageToKafkaTopic">
             <option name="EMULATED" value="true" />
           </properties>
