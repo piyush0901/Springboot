@@ -14,13 +14,13 @@ public class KafkaTransactions {
 
     @Id
     private Long transid;
-    private String createdAt;
 
     private Long userid1;
     private String mobile;
     private Integer amount;
     private String status;
 
+    private String createdAt;
 
     public Long getTransid() {
         return transid;

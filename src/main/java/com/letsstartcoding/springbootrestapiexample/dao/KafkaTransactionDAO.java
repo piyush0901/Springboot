@@ -6,6 +6,8 @@ import com.letsstartcoding.springbootrestapiexample.repository.KafkaTransactionR
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class KafkaTransactionDAO {
 
@@ -15,5 +17,9 @@ public class KafkaTransactionDAO {
     /*to save an T1*/
     public KafkaTransactions save(KafkaTransactions trans) {
         return kafkaTransactionRepository.save(trans);
+    }
+
+    public List<KafkaTransactions> findAll(){
+        return kafkaTransactionRepository.findAll();
     }
 }
