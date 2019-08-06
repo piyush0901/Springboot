@@ -26,7 +26,7 @@ public class Producer {
     public void sendMessage(List<Transactions> trans, Offset off) throws JsonProcessingException {
 
         ObjectMapper mapper = new ObjectMapper();
-        for(int i=off.getValue();i<trans.size();i++){
+        for(int i=0;i<trans.size();i++){
             kafkaTemplate.send(TOPIC,mapper.writeValueAsString(trans.get(i)));
         }
         System.out.println("Hi");
