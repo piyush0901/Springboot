@@ -52,11 +52,7 @@ public class Consumer {
         esRecon.setStatus(trans1.getStatus());
         esRecon.setUserid1(trans1.getUserid1());
 
-        System.out.println("Hello");
-        esReconDAO.save(esRecon);
-        ESRecon esRecons = esReconDAO.findOne(esRecon.getId());
-        esRepository.save(esRecons);
-        System.out.println("Heloebfs");
+        esRepository.save(esRecon);
     }
 
 
