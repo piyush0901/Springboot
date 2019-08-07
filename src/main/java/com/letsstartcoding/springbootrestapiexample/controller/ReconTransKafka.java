@@ -34,16 +34,27 @@ public class ReconTransKafka {
 
         Recons recons = reconDAO.findOne(1);
 
-        for(int i=recons.getReconvalue();i<kafkaTransactions.size();i++)
-        {
 
-            if(transactions.get(i).getAmount() != kafkaTransactions.get(i).getAmount())
+        String st,skt;
+        String mt,mkt;
+        int at,akt;
+        long ut,ukt;
+
+        for(int i=0;i<kafkaTransactions.size();i++)
+        {
+            at = transactions.get(i).getAmount();
+            akt = kafkaTransactions.get(i).getAmount();
+
+            ut = transactions.get(i).getUserid1();
+            ukt = kafkaTransactions.get(i).getUserid1();
+
+            if(at!=akt)
                 return "Error in amount";
-            if(transactions.get(i).getStatus().equals(kafkaTransactions.get(i).getStatus()))
+            if(!transactions.get(i).getStatus().equals(kafkaTransactions.get(i).getStatus()))
                 return "Error in status";
-            if(transactions.get(i).getUserid1() != kafkaTransactions.get(i).getUserid1())
+            if(ut!=ukt)
                 return "Error in sender's id";
-            if(transactions.get(i).getMobile().equals(kafkaTransactions.get(i).getMobile()))
+            if(!transactions.get(i).getMobile().equals(kafkaTransactions.get(i).getMobile()))
                 return "Error in receiver's mobile";
         }
         recons.setReconvalue(kafkaTransactions.size());

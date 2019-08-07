@@ -7,7 +7,6 @@ import com.letsstartcoding.springbootrestapiexample.model.Offset;
 import com.letsstartcoding.springbootrestapiexample.model.Transactions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,7 +25,7 @@ public class Producer {
     public void sendMessage(List<Transactions> trans, Offset off) throws JsonProcessingException {
 
         ObjectMapper mapper = new ObjectMapper();
-        for(int i=0;i<trans.size();i++){
+        for(int i=off.getValue();i<trans.size();i++){
             kafkaTemplate.send(TOPIC,mapper.writeValueAsString(trans.get(i)));
         }
         System.out.println("Hi");
